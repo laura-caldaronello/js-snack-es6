@@ -53,9 +53,12 @@ var teams = [
     }
 ];
 
+var newArray = [];
 teams.forEach((element) => {
     element.punti = Math.floor(Math.random() * 30);
     element.falli = Math.floor(Math.random() * 5);
+
+    var {name,falli} = element;
+    newArray.push({name,falli});
 });
-const {name,punti,falli} = teams;
-console.log(teams);
+console.log(newArray);
