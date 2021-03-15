@@ -29,7 +29,7 @@ console.log(`La bici più leggera è ${lighter.name}, che pesa ${lighter.weight}
 var [,,,element] = cycles;
 console.log(`La bici più leggera è ${element.name}, che pesa ${element.weight}kg`);
 
-// snack 2: Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti. Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0. Generare numeri random al posto degli 0 nelle proprietà: Punti fatti e falli subiti. Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+// snack 2: Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti. Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
 var teams = [
     {
         'name': 'udinese',
@@ -55,9 +55,10 @@ var teams = [
 
 var newArray = [];
 teams.forEach((element) => {
+    // Generare numeri random al posto degli 0 nelle proprietà: Punti fatti e falli subiti.
     element.punti = Math.floor(Math.random() * 30);
     element.falli = Math.floor(Math.random() * 5);
-
+    // Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
     var {name,falli} = element;
     newArray.push({name,falli});
 });
