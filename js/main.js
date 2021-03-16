@@ -73,3 +73,23 @@ teams.forEach((element) => {
     newArray.push({name,falli});
 });
 console.log(newArray);
+
+// snack 3
+// Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b). La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri. Usiamo i nuovi metodi degli array foreach o filter
+var arr = ['Paolo','Federica','Sebastiano','Michela','Stefano','Salvatore','Marco'];
+console.log(arr);
+
+var i = 0;
+do {
+    var n1 = Math.floor(Math.random() * arr.length);
+    var n2 = Math.floor(Math.random() * arr.length);
+    var a, b;
+    n1 < n2 ? (a = n1, b = n2) : (a = n2, b = n1);
+    i++;
+} while (i < arr.length && n1 == n2);
+console.log(a,b);
+
+var newArr = arr.filter((person,index) => {
+    return (index >= a && index <= b);
+});
+console.log(newArr);
