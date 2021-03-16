@@ -23,10 +23,10 @@ var cycles = [
 let cycleLight = cycles[0];
 cycles.forEach((cycle) => {
     if (cycle.weight < cycleLight.weight) {
-        cyclesLight = cycle;
+        cycleLight = cycle;
     }
 }); 
-console.log(`La bici più leggera è ${cyclesLight.name}, che pesa ${cyclesLight.weight}kg`);
+console.log(`La bici più leggera è ${cycleLight.name}, che pesa ${cycleLight.weight}kg`);
 
 // modo 2
 var weights = [];
