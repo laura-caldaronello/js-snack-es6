@@ -19,13 +19,23 @@ var cycles = [
 ];
 
 // Stampare a schermo la bici con peso minore utilizzando destructuring e template literal
-// modo 1
+// modo post correzione
 var weights = [];
+let cycleLight = cycles[0];
+cycles.forEach((cycle) => {
+    if (cycle.weight < cycleLight.weight) {
+        cyclesLight = cycle;
+    }
+}); 
+console.log(`La bici più leggera è ${cyclesLight.name}, che pesa ${cyclesLight.weight}kg`);
+
+// modo 2
 cycles.forEach((element) => weights.push(element.weight));
 var lighter = cycles[weights.indexOf(Math.min(...weights))];
-console.log(`La bici più leggera è ${lighter.name}, che pesa ${lighter.weight}kg`);
+const {weight,name} = lighter;
+console.log(`La bici più leggera è ${name}, che pesa ${weight}kg`);
 
-// modo 2: individuo io il peso minore (non sapevo in che altro modo usare destructuring)
+// modo 3: individuo io il peso minore (non sapevo in che altro modo usare destructuring)
 var [,,,element] = cycles;
 console.log(`La bici più leggera è ${element.name}, che pesa ${element.weight}kg`);
 
