@@ -20,7 +20,6 @@ var cycles = [
 
 // Stampare a schermo la bici con peso minore utilizzando destructuring e template literal
 // modo post correzione
-var weights = [];
 let cycleLight = cycles[0];
 cycles.forEach((cycle) => {
     if (cycle.weight < cycleLight.weight) {
@@ -30,6 +29,7 @@ cycles.forEach((cycle) => {
 console.log(`La bici più leggera è ${cyclesLight.name}, che pesa ${cyclesLight.weight}kg`);
 
 // modo 2
+var weights = [];
 cycles.forEach((element) => weights.push(element.weight));
 var lighter = cycles[weights.indexOf(Math.min(...weights))];
 const {weight,name} = lighter;
